@@ -7,6 +7,7 @@
 #include "Tank.generated.h"
 
 //Forward declaration
+class UTankMovementComponent;
 class UTankAimingComponent;
 class AProjectile;
 class UTankBarrel;
