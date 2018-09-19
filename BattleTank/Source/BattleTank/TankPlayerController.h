@@ -15,6 +15,10 @@ UCLASS()
 class BATTLETANK_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
+
+protected:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+	ATank * GetControlledTank() const;
 	
 public:
 	UPROPERTY(EditAnywhere)
@@ -26,10 +30,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	float LineTraceRange = 1000000.f;
 
-
 private:
-	ATank * GetControlledTank() const;
-
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 	//start the tank moving the barrel so that the shot would hit where
